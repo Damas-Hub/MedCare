@@ -2,10 +2,12 @@ import { View, Text, StyleSheet, Animated } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useRef, useState } from "react";
 import { FadeTransition } from "@react-navigation/bottom-tabs/lib/typescript/commonjs/src/TransitionConfigs/TransitionPresets";
+import { useRouter } from "expo-router";
 
 export default function SplashScreen() {
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.5)).current;
+  const router = useRouter()
 
   useEffect(() => {
     Animated.parallel([
@@ -21,6 +23,11 @@ export default function SplashScreen() {
         useNativeDriver: true,
       }),
     ]).start();
+
+    const timer = setTimeout(() =>{
+      router.replace('/auth');
+    },2000)
+    return () => clearTimeout(timer);
   }, []);
 
   return (
