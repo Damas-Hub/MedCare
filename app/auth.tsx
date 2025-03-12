@@ -13,4 +13,14 @@ import { LinearGradient } from "expo-linear-gradient";
 
 const { width } = Dimensions.get("window");
 
-export default function AuthScreen() {}
+export default function AuthScreen() {
+  return (
+    <LinearGradient colors={["#4caf50", "#2e7d32"]}>
+      <View>
+        <View>
+            <Ionicons name="medical" size={80} color="white" />
+        </View>
+      </View>
+    </LinearGradient>
+  );
+}
