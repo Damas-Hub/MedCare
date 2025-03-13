@@ -20,6 +20,20 @@ export default function AuthScreen() {
         <View>
             <Ionicons name="medical" size={80} color="white" />
         </View>
+        <Text>
+          MedCare
+        </Text>
+        <Text>
+          Personal Health Assistant
+        </Text>
+        <View>
+          <Text>
+            Welcome Back!
+          </Text>
+          <Text>
+            
+          </Text>
+        </View>
       </View>
     </LinearGradient>
   );
